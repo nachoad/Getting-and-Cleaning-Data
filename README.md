@@ -28,10 +28,10 @@ Good luck!
 ## Files on this repo:
   
 - *run_analysis.R* : the R-code run on the data set
-- *Tidy.txt* : the clean data extracted from the original data using *run_analysis.R*
-- *CodeBook.md* : the CodeBook reference to the variables in *Tidy.txt*
+- *tidy_data.txt* : the clean data extracted from the original data using *run_analysis.R*
+- *CodeBook.md* : the CodeBook reference to the variables in *tidy_data.txt*
 - *README.md* : the analysis of the code in *run_analysis.R*
-- *analysis.html* : the html version of *README.md* that can be accessed at 
+- *README.html* : the html version of *README.md* that can be accessed at https://github.com/nachoad/Getting-and-Cleaning-Data/blob/master/README.html
   
 ## Getting Started
   
@@ -183,7 +183,7 @@ names(extractedData) <- gsub("BodyBody", "Body", names(extractedData))
 
 Checking:
 ```r
-names(Data)
+names(extractedData)
 ```
 
 ## Part 5 - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.

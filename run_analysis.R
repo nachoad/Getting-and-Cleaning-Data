@@ -1,6 +1,6 @@
 ################################################################
 ## Note:                                                      ##
-##  All the script has been commented in the README.md file
+##  All the script has been commented in the README.md file   ##
 ################################################################
 
 # setwd("~/PERSONAL/COURSERA/GETTING_AND_CLEANING_DATA/FinalProject/n")
