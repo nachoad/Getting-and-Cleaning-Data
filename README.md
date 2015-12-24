@@ -31,8 +31,7 @@ Good luck!
 - *tidy_data.txt* : the clean data extracted from the original data using *run_analysis.R*
 - *CodeBook.md* : the CodeBook reference to the variables in *tidy_data.txt*
 - *README.md* : the analysis of the code in *run_analysis.R*
-- *README.html* : the html version of *README.md* that can be accessed at https://github.com/nachoad/Getting-and-Cleaning-Data/blob/master/README.html
-  
+ 
 ## Getting Started
   
 ### Get the data
