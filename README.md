@@ -36,19 +36,19 @@ Good luck!
 ## Getting Started
   
 ### Get the data
-1.- Download the file and put the file in the `data` folder
+Download the file and put the file in the `data` folder
 ```r
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
 ```
 
-2.- Unzip the file
+Unzip the file
 ```r
 unzip(zipfile="./data/Dataset.zip",exdir="./data")
 ```
 
-3.- Unzipped files are in the folder `UCI HAR Dataset. Get the list of the files
+Unzipped files are in the folder `UCI HAR Dataset. Get the list of the files
 ```r
 ath_rf <- file.path("./data" , "UCI HAR Dataset")
 files <- list.files(path_rf, recursive=TRUE)
@@ -64,7 +64,7 @@ The files that will be used to load data are listed as follows:
 - train/X_train.txt
 - train/y_train.txt
 
-4. Read data from the files into the variables
+Read data from the files into the variables
 
 Read the Activity files
 ```r
@@ -90,7 +90,7 @@ featuresNames <- read.table(file.path(path_rf, "features.txt"), header = FALSE)
 activityLabels <- read.table(file.path(path_rf, "activity_labels.txt" ), header = FALSE)
 ```
 
-5. Look at the properties of the above varibles
+Look at the properties of the above varibles
 ```r
 str(dataActivityTest)
 str(dataActivityTrain)
@@ -102,21 +102,21 @@ str(dataFeaturesTrain)
 
 ## Part 1 - Merge the training and the test sets to create one data set.
 
-1. Concatenate the data tables by rows
+Concatenate the data tables by rows
 ```r
 dataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
 dataActivity<- rbind(dataActivityTrain, dataActivityTest)
 dataFeatures<- rbind(dataFeaturesTrain, dataFeaturesTest)
 ```
 
-2. Set names to variables
+Set names to variables
 ```r
 names(dataSubject) <- c("subject")
 names(dataActivity) <- c("activity")
 names(dataFeatures) <- dataFeaturesNames$V2
 ```
 
-3. Merge columns to get the data frame Data for all data
+Merge columns to get the data frame Data for all data
 ```r
 Data <- cbind(dataFeatures, dataSubject, dataActivity)
 ```
@@ -200,17 +200,17 @@ write.table(tidyData, file = "tidy_data.txt",row.name=FALSE)
 ##### Project v.1.1
 ##### R Version:
 
-*platform:*       x86_64-apple-darwin13.4.0   
-*arch:*           x86_64                      
-*os:*             darwin13.4.0                
-*system:*         x86_64, darwin13.4.0        
+*platform:*   x86_64-apple-darwin13.4.0   
+*arch:*   x86_64                      
+*os:*   darwin13.4.0                
+*system:*   x86_64, darwin13.4.0        
 *status:*                                     
-*major:*          3                           
-*minor:*          2.3                         
-*year:*           2015                        
-*month:*          12                          
-*day:*            10                          
-*svn rev:*        69752                       
-*language:*       R                           
-*version.string:* R version 3.2.3 (2015-12-10)
-*nickname:*       Wooden Christmas-Tree   
+*major:*   3                           
+*minor:*   2.3                         
+*year:*   2015                        
+*month:*   12                          
+*day:*   10                          
+*svn rev:*   69752                       
+*language:*   R                           
+*version.string:*   R version 3.2.3 (2015-12-10)
+*nickname:*   Wooden Christmas-Tree   
